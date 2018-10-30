@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title><TRS_CHANNEL ID="开学好礼，等您来取" FIELD="CHNLDESC" AUTOLINK="FALSE"/></title>
+
+    <link rel="stylesheet" type="text/css" href="dist/v20180828/run-common-min.css"/>
+    <script type="application/javascript" src="dist/v20180828/run_common-min.js"></script>
+</head>
+<body>
+<div class="wazm-wrapper j_wrapper index" data-actid="256" <TRS_Documents ID="开学好礼，等您来取" CHILDINDEX="-1" NUM="1" STARTPOS="0">style="background: url(<TRS_Appendix index="0" Mode="PIC" FIELD="_RECURL" AUTOLINK="FALSE" UPLOAD="TRUE"/>) no-repeat top center/100%  #f9d300"</TRS_Documents>>
+
+    <TRS_Documents ID="开学好礼，等您来取" CHILDINDEX="-1" NUM="1" STARTPOS="0">
+    <div data-option-id="1001"  class="main-btn j-vote-btn" style="background: url(<TRS_Appendix index="1" Mode="PIC" FIELD="_RECURL" AUTOLINK="FALSE" UPLOAD="TRUE"/>) no-repeat top center/100%"></div>
+    </TRS_Documents>
+</div>
+<!--外部打开-->
+<div id="j-to-download" class="out-of-app hide" style="background: #f9d300">
+    <div class="download">
+        <div class="app">
+            <i class="logo"></i>
+            <p class="name">熊猫视频</p>
+            <p class="slogan">会娱乐 更快乐</p>
+        </div>
+        <div class="download-btn"><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.shinyv.pandamtv">立即下载</a></div>
+    </div>
+    <div class="img-area">
+        <TRS_Documents ID="开学好礼，等您来取" CHILDINDEX="-1" NUM="1" STARTPOS="0">
+            <img src="<TRS_Appendix index="2" Mode="PIC" FIELD="_RECURL" AUTOLINK="FALSE" UPLOAD="TRUE"/>">
+        </TRS_Documents>
+    </div>
+
+</div>
+
+<!--提示弹窗0 未登陆-->
+<div class="popup popup_more hide" id="j_gotologin" >
+    <div class="popup_card ">
+        <div class="">
+            <div class="popup_title">您还未登陆</div>
+            <div class="popup_subtitle">
+                <p class="">
+                    登陆后才可参加活动。
+                </p>
+                <div class="btn-area clear">
+                    <div class="btn gray j-pclose" >以后再说</div>
+                    <div class="btn yellow j_gotologin" onclick="webBridge.login()">现在登陆</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--提示弹窗1 不能参加-->
+<div class="popup popup_more hide" id="j_more" >
+    <div class="popup_card ">
+        <div class="">
+            <div class="popup_content">
+                <p class="">
+                    本活动仅限四川联通校园“沃派熊猫卡”、“沃派随意享卡”用户参与哦!
+                </p>
+                <div class="btn-area clear">
+                    <div class="btn gray j-pclose" >以后再说</div>
+                    <div class="btn yellow">
+                        <TRS_Documents ID="开学好礼，等您来取" CHILDINDEX="-1" NUM="1" STARTPOS="1">
+                            <a href="<TRS_DOCUMENT FIELD="DOCCONTENT"/>">了解校园卡</a>
+                        </TRS_Documents>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--提示弹窗2 成功领取-->
+<div class="popup popup_done hide"  id="j_done">
+    <div class="popup_card ">
+        <div class="">
+            <div class="popup_img">
+                <TRS_Documents ID="开学好礼，等您来取" CHILDINDEX="-1" NUM="1" STARTPOS="0">
+                    <img src="<TRS_Appendix index="3" Mode="PIC" FIELD="_RECURL" AUTOLINK="FALSE" UPLOAD="TRUE"/>">
+                </TRS_Documents>
+            </div>
+            <div class="popup_content">
+                <p class="">
+                    您已成功获赠开学礼，具体获赠礼品请查看“活动规则”。
+                </p>
+                <div class="btn-area clear">
+                    <div class="btn yellow j-pclose" >确&nbsp;&nbsp;&nbsp;定</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--提示弹窗3 已领取-->
+<div class="popup popup_done hide"  id="j_tips">
+    <div class="popup_card ">
+        <div class="">
+            <div class="popup_title"></div>
+            <div class="popup_content">
+                <p class="tips_content">
+                    你已领取，每人限领一次。
+                </p>
+                <div class="btn-area clear">
+                    <div class="btn yellow j-pclose" >确&nbsp;&nbsp;&nbsp;定</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    <TRS_Documents ID="开学好礼，等您来取" CHILDINDEX="-1" NUM="1" STARTPOS="2">
+
+
+        function getInfo(){
+            var thisUrl = window.location.href;
+            var thisId= '',thisTimeStamp = '',thisNonceStr = '',thisSignature ='';
+            $.ajax({
+                type: "post",
+                /*url: "http://192.168.20.183:8080/getWxtoken",*/
+                url: "http://pandaapi.sctv.com:45086/getWxtoken",
+                dataType : 'json',
+                data:{'thisUrl':thisUrl},
+                success: function (msg) {
+                    // msg = JSON.parse(msg);
+                    thisId = msg.appid;
+                    thisTimeStamp = msg.timestamp;
+                    thisNonceStr = msg.noncestr;
+                    thisSignature = msg.sign;
+                    getConfig(thisId,thisTimeStamp,thisNonceStr,thisSignature);
+                    getConfig2(thisId,thisTimeStamp,thisNonceStr,thisSignature);
+                },
+                error: function (msg) {
+                    // window.location.href = "404.jsp";
+                }
+            });
+
+        }
+
+    function getConfig2(id,stamp,Str,ture){
+        setShareInfo({
+            title: '<TRS_DOCUMENT FIELD="DOCPEOPLE" AUTOLINK="false"/>',
+            summary:'<TRS_DOCUMENT FIELD="DOCABSTRACT"/>',
+            pic:'<TRS_Appendix index="0" Mode="PIC" FIELD="_RECURL" AUTOLINK="FALSE" UPLOAD="TRUE" URLISABS="TRUE"/>',
+            url: window.location.href,
+            WXconfig:{
+                swapTitleInWX: false,
+                appId: id,
+                timestamp: stamp,
+                nonceStr: Str,
+                signature:ture
+            }
+        });
+    }
+
+
+    /*初始化配置*/
+    function getConfig(id,stamp,Str,ture){
+        wx.config({
+            debug: false,
+            appId: id,
+            timestamp: stamp,
+            nonceStr: Str,
+            signature: ture,
+            jsApiList: [
+                'checkJsApi',
+                'onMenuShareTimeline',
+                'onMenuShareAppMessage',
+                'onMenuShareQQ',
+                'onMenuShareQZone'
+            ]
+        });
+    }
+
+    wx.ready(function () {
+        // 1 判断当前版本是否支持指定 JS 接口，支持批量判断
+        wx.checkJsApi({
+            jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage','onMenuShareQQ','onMenuShareQZone'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
+            success: function(res) {
+
+            }
+        });
+        /*分享到朋友圈*/
+        wx.onMenuShareTimeline({
+            title:'<TRS_DOCUMENT FIELD="DOCPEOPLE" AUTOLINK="false"/>', // 分享标题
+            link: window.location.href, // 分享链接
+            imgUrl: '<TRS_Appendix index="0" Mode="PIC" FIELD="_RECURL" AUTOLINK="FALSE" UPLOAD="TRUE" URLISABS="TRUE"/>', // 分享图标
+            trigger: function (res) {
+
+            },
+            success: function () {
+
+            },
+            cancel: function () {
+
+            }
+        });
+        /*分享到朋友*/
+
+        wx.onMenuShareAppMessage({
+            title: '<TRS_DOCUMENT FIELD="DOCPEOPLE" AUTOLINK="false"/>', // 分享标题
+            desc: '<TRS_DOCUMENT FIELD="DOCABSTRACT"/>', // 分享描述
+            link: window.location.href, // 分享链接
+            imgUrl: '<TRS_Appendix index="0" Mode="PIC" FIELD="_RECURL" AUTOLINK="FALSE" UPLOAD="TRUE" URLISABS="TRUE"/>', // 分享图标
+            type: '', // 分享类型,music、video或link，不填默认为link
+            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+            success: function () {
+
+            },
+            cancel: function () {
+
+            }
+        });
+        /*分享到QQ空间*/
+        wx.onMenuShareQZone({
+            title: '<TRS_DOCUMENT FIELD="DOCPEOPLE" AUTOLINK="false"/>', // 分享标题
+            desc: '<TRS_DOCUMENT FIELD="DOCABSTRACT"/>', // 分享描述
+            link: window.location.href, // 分享链接
+            imgUrl: '<TRS_Appendix index="0" Mode="PIC" FIELD="_RECURL" AUTOLINK="FALSE" UPLOAD="TRUE" URLISABS="TRUE"/>', // 分享图标
+            success: function () {
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+        /*分享到QQ*/
+        wx.onMenuShareQQ({
+            title: '<TRS_DOCUMENT FIELD="DOCPEOPLE" AUTOLINK="false"/>', // 分享标题
+            desc: '<TRS_DOCUMENT FIELD="DOCABSTRACT"/>', // 分享描述
+            link: window.location.href, // 分享链接
+            imgUrl: '<TRS_Appendix index="0" Mode="PIC" FIELD="_RECURL" AUTOLINK="FALSE" UPLOAD="TRUE" URLISABS="TRUE"/>', // 分享图标
+            success: function () {
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+    });
+
+    getInfo();
+
+
+    </TRS_Documents>
+</script>
+
+
+
+</body>
+
+</html>

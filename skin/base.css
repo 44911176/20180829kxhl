@@ -1,0 +1,118 @@
+html {
+  height: 100%;
+}
+body {
+  font-family: '微软雅黑', Helvetica, Arial, '宋体', sans-serif;
+  color: #000;
+  -webkit-backface-visibility: hidden;
+  background: #ffffff;
+  height: 100%;
+  margin: 0 auto;
+}
+.clear:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.invisible {
+  visibility: hidden;
+}
+.popup {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+.popup .popup_card {
+  position: relative;
+  background-color: #fff;
+  color: #323232;
+  width: 16.325rem;
+  height: auto;
+  border-radius: 1rem;
+  margin: 12rem auto;
+  padding: 0.5rem;
+}
+a {
+  color: inherit;
+}
+@media screen and (min-width: 1025px) {
+  html {
+    font-size: 74px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 54px;
+  }
+}
+@media screen and (max-width: 830px) {
+  html {
+    font-size: 44px;
+  }
+}
+@media screen and (max-width: 770px) {
+  html {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 750px) {
+  html {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 667px) {
+  html {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 568px) {
+  html {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 414px) {
+  html {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 393px) {
+  html {
+    font-size: 20.96px;
+  }
+}
+@media screen and (max-width: 384px) {
+  html {
+    font-size: 20.48px;
+  }
+}
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 19.2px;
+  }
+}
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 17px;
+  }
+}

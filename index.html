@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>开学有礼</title>
+    <link rel="stylesheet" type="text/css" href="skin/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="skin/base.css"/>
+    <link rel="stylesheet" type="text/css" href="skin/index.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="../dist/v20170614/run-common-min.css"/>-->
+    <script type="application/javascript" src="src/jquery.min.js"></script>
+    <script type="application/javascript" src="src/hybirdcall.js"></script>
+    <script type="application/javascript" src="src/uiBind.js"></script>
+    <script type="application/javascript" src="src/index.js"></script>
+
+    <!--<script type="application/javascript" src="src/uiBind.js"></script>-->
+    <!--<script type="application/javascript" src="dist/v20170323/run_common-min.js"></script>-->
+</head>
+<body>
+<div class="wazm-wrapper j_wrapper index" data-actid="256" style="background: url(img/bg.jpg) no-repeat top center/100%  #f9d300">
+
+    <!--<div class="btn hide" id="j-login" onclick="webBridge.login()"></div>-->
+
+    <div data-option-id="1001"  class="main-btn j-vote-btn" style="background: url(img/main-btn.png) no-repeat top center/100%"></div>
+
+</div>
+
+<!--外部打开-->
+<div id="j-to-download" class="out-of-app hide" style="background: #f9d300">
+    <div class="download">
+        <div class="app">
+            <i class="logo"></i>
+            <p class="name">熊猫视频</p>
+            <p class="slogan">会娱乐 更快乐</p>
+        </div>
+        <div class="download-btn"><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.shinyv.pandamtv">立即下载</a></div>
+    </div>
+    <div class="img-area">
+        <img src="img/app-share.jpg">
+    </div>
+
+</div>
+
+<!--提示弹窗0 未登陆-->
+<div class="popup popup_more hide" id="j_gotologin" >
+    <div class="popup_card ">
+        <div class="">
+            <div class="popup_title">您还未登陆</div>
+            <div class="popup_subtitle">
+                <p class="">
+                    登陆后才可参加活动。
+                </p>
+                <div class="btn-area clear">
+                    <div class="btn gray j-pclose" >以后再说</div>
+                    <div class="btn yellow j_gotologin" onclick="webBridge.login()">现在登陆</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--提示弹窗1 不能参加-->
+<div class="popup popup_more hide" id="j_more" >
+    <div class="popup_card ">
+        <div class="">
+            <div class="popup_content">
+                <p class="">
+                    本活动仅限四川联通校园“沃派熊猫卡”、“沃派随意享卡”用户参与哦!
+                </p>
+                <div class="btn-area clear">
+                    <div class="btn gray j-pclose" >以后再说</div>
+                    <div class="btn yellow"><a href="">了解校园卡</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--提示弹窗2 成功领取-->
+<div class="popup popup_done hide"  id="j_done">
+    <div class="popup_card ">
+        <div class="">
+            <div class="popup_img"><img class="" src="img/done.jpg"></div>
+            <div class="popup_content">
+                <p class="">
+                    您已成功获赠开学礼，具体获赠礼品请查看“活动规则”。
+                </p>
+                <div class="btn-area clear">
+                    <div class="btn yellow j-pclose" >确&nbsp;&nbsp;&nbsp;定</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--提示弹窗3 已领取-->
+<div class="popup popup_done hide"  id="j_tips">
+    <div class="popup_card ">
+        <div class="">
+            <div class="popup_title"></div>
+            <div class="popup_content">
+                <p class="tips_content">
+                    你已领取，每人限领一次。
+                </p>
+                <div class="btn-area clear">
+                    <div class="btn yellow j-pclose" >确&nbsp;&nbsp;&nbsp;定</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

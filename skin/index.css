@@ -1,0 +1,177 @@
+.overflow1 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.wazm-wrapper {
+  overflow: hidden;
+}
+.wazm-wrapper.index {
+  width: 100%;
+}
+.wazm-wrapper .voted-num-area {
+  padding: 0.75rem;
+}
+.wazm-wrapper .voted-num {
+  width: 4.75rem;
+  height: 1.5rem;
+  border-radius: 1rem;
+  background: #3897d6;
+  color: #ffffff;
+  font-size: 0.6rem;
+  text-align: center;
+  line-height: 1.5rem;
+}
+.wazm-wrapper .voted-num .num {
+  font-size: 0.8rem;
+}
+.wazm-wrapper .main-btn {
+  margin: 20.5rem auto 30.5rem;
+  background: url("../img/main-btn.png") no-repeat center / 100%;
+  height: 3.75rem;
+  width: 16rem;
+}
+.wazm-wrapper .txt-area {
+  color: #9d782f;
+  font-size: 0.6rem;
+  line-height: 1rem;
+  padding: 0 1.5rem;
+  margin-top: -3rem;
+}
+.wazm-wrapper .txt-area .unit {
+  padding: 0.25rem 0.75rem;
+  text-align: left;
+  font-size: 0.5rem;
+  margin-top: 0.75rem;
+  border: 1px solid #9d782f;
+}
+.wazm-wrapper .txt-area .footer {
+  background: #ffeaa4;
+  padding: 1.5rem 0;
+  text-align: center;
+  color: #c5973b;
+  font-size: 0.5rem;
+}
+.out-of-app {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 29.8rem;
+}
+.out-of-app .download {
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  padding: 0.25rem 0.6rem;
+  color: #FFFFFF;
+}
+.out-of-app .download .app {
+  float: left;
+}
+.out-of-app .download .app .logo {
+  background: url("i/logo.png") no-repeat center / 100%;
+  height: 2rem;
+  width: 2rem;
+  display: inline-block;
+}
+.out-of-app .download .app .name {
+  font-size: 0.8rem;
+  position: absolute;
+  top: 0.35rem;
+  left: 3rem;
+}
+.out-of-app .download .app .slogan {
+  font-size: 0.6rem;
+  color: #84807d;
+  position: absolute;
+  top: 1.4rem;
+  left: 3rem;
+}
+.out-of-app .download .download-btn {
+  float: right;
+  width: 4rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  text-align: center;
+  background: #01d6e8;
+  border-radius: 0.8rem;
+  font-size: 0.7rem;
+  margin-top: 0.3rem;
+}
+.out-of-app .img-area img {
+  width: 100%;
+}
+.popup_more .popup_title,
+.popup_done .popup_title {
+  font-size: 1rem;
+  color: #333333;
+  padding-top: 1.6rem;
+  text-align: center;
+}
+.popup_more .popup_subtitle,
+.popup_done .popup_subtitle {
+  font-size: 0.8rem;
+  color: #555555;
+  text-align: center;
+  padding: 0.8rem 1rem;
+}
+.popup_more .popup_content,
+.popup_done .popup_content {
+  font-size: 0.8rem;
+  color: #333333;
+  padding: 1rem 1rem;
+  line-height: 1.1rem;
+}
+.popup_more .popup_content p,
+.popup_done .popup_content p {
+  padding: 0rem 0.5rem;
+}
+.popup_more .popup_content .tips_content,
+.popup_done .popup_content .tips_content {
+  text-align: center;
+}
+.popup_more .popup_img,
+.popup_done .popup_img {
+  text-align: center;
+  padding-top: 1.2rem;
+}
+.popup_more .popup_img img,
+.popup_done .popup_img img {
+  height: 5rem;
+  width: 9.15rem;
+}
+.popup_more .btn-area,
+.popup_done .btn-area {
+  margin-top: 2rem;
+  text-align: center;
+}
+.popup_more .btn-area .btn,
+.popup_done .btn-area .btn {
+  height: 1.85rem;
+  line-height: 1.85rem;
+  width: 5.5rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  display: inline-block;
+  margin: 0 0.5rem;
+  color: #333333;
+}
+.popup_more .btn-area .btn.white,
+.popup_done .btn-area .btn.white {
+  border: 1px solid #999;
+}
+.popup_more .btn-area .btn.yellow,
+.popup_done .btn-area .btn.yellow {
+  background: #f9d300;
+}
+.popup_more .btn-area .btn.gray,
+.popup_done .btn-area .btn.gray {
+  background: #e5e5e5;
+}
+.popup_done .yellow {
+  margin: 0 auto;
+  float: none;
+}
